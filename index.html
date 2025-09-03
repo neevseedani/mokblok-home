@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MokBlok - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">MokBlok</h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-tab="home">Home</button>
+                <button class="nav-btn" data-tab="about">About</button>
+                <button class="nav-btn" data-tab="team">Team</button>
+                <button class="nav-btn" data-tab="templates">UI/UX Templates</button>
+                <button class="nav-btn" data-tab="screenshots">Screenshot Library</button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Tab -->
+            <div class="tab-content active" id="home">
+                <div class="hero">
+                    <h2>Welcome to MokBlok</h2>
+                    <p>Your creative hub for design inspiration and collaboration</p>
+                    <div class="hero-buttons">
+                        <button class="btn primary" onclick="showTab('about')">Learn More</button>
+                        <button class="btn secondary" onclick="showTab('team')">Meet Our Team</button>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="feature-card">
+                        <h3>About Us</h3>
+                        <p>Discover our mission and values</p>
+                        <button class="btn" onclick="showTab('about')">Explore</button>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Our Team</h3>
+                        <p>Meet the creative minds behind MokBlok</p>
+                        <button class="btn" onclick="showTab('team')">Meet Us</button>
+                    </div>
+                    <div class="feature-card">
+                        <h3>UI/UX Templates</h3>
+                        <p>Access our collection of design templates</p>
+                        <button class="btn" onclick="showTab('templates')">Access</button>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Screenshot Library</h3>
+                        <p>Browse our curated screenshot collection</p>
+                        <button class="btn" onclick="showTab('screenshots')">Browse</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Tab -->
+            <div class="tab-content" id="about">
+                <h2>About MokBlok</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>MokBlok is a creative platform dedicated to fostering innovation in design and user experience. We believe that great design has the power to transform how people interact with technology.</p>
+                        <p>Our mission is to provide designers, developers, and creative professionals with the tools, resources, and inspiration they need to create exceptional digital experiences.</p>
+                        <h3>Our Values</h3>
+                        <ul>
+                            <li><strong>Innovation:</strong> We constantly push the boundaries of what is possible</li>
+                            <li><strong>Collaboration:</strong> We believe great ideas come from working together</li>
+                            <li><strong>Quality:</strong> We maintain the highest standards in everything we do</li>
+                            <li><strong>Accessibility:</strong> We make design resources available to everyone</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-image">Design Concept</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Tab -->
+            <div class="tab-content" id="team">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">JD</div>
+                        <h3>Jane Doe</h3>
+                        <p class="role">Creative Director</p>
+                        <p class="bio">Passionate about creating meaningful user experiences and leading creative teams to success.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">JS</div>
+                        <h3>John Smith</h3>
+                        <p class="role">Lead Designer</p>
+                        <p class="bio">Expert in UI/UX design with a focus on accessibility and user-centered design principles.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">MJ</div>
+                        <h3>Maria Johnson</h3>
+                        <p class="role">UX Researcher</p>
+                        <p class="bio">Dedicated to understanding user needs and translating insights into actionable design solutions.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">AL</div>
+                        <h3>Alex Lee</h3>
+                        <p class="role">Frontend Developer</p>
+                        <p class="bio">Bridges the gap between design and functionality, ensuring pixel-perfect implementations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI/UX Templates Tab -->
+            <div class="tab-content" id="templates">
+                <div class="password-protected" id="templates-protected">
+                    <h2>UI/UX Templates</h2>
+                    <p>This section is password protected. Please enter the password to access our template library.</p>
+                    <div class="password-form">
+                        <input type="password" id="templates-password" placeholder="Enter password" class="password-input">
+                        <button class="btn primary" onclick="checkPassword('templates')">Access Templates</button>
+                    </div>
+                </div>
+                <div class="templates-content" id="templates-content" style="display: none;">
+                    <div class="template-instructions">
+                        <h1 class="template-header">
+                            <a href="https://www.figma.com/buzz/2DmkCG3u4qhfl4tFs4EfdW/CLDR-components?node-id=17-447&t=a53zQOJLOJw8pgFs-1" target="_blank" rel="noopener noreferrer">
+                                MokBlok Template Generation Instructions
+                            </a>
+                        </h1>
+                        
+                        <div class="instruction-section">
+                            <h2>Prerequisites</h2>
+                            <p>You will need a source CSV file containing your translation data set. The CSV should be formatted with each column representing a different word or text element to be translated.</p>
+                        </div>
+
+                        <div class="instruction-section">
+                            <h2>CSV Format Requirements</h2>
+                            
+                            <h3>Proper Format</h3>
+                            <p>Your CSV should be structured with:</p>
+                            <ul>
+                                <li>Each column containing a specific word or text element</li>
+                                <li>Each row representing a different language or translation variant</li>
+                                <li>Headers clearly identifying the content type</li>
+                            </ul>
+
+                            <h3>Reformatting Your CSV</h3>
+                            <p>If your spreadsheet is not in the required format, you will need to transpose your data:</p>
+                            
+                            <ol>
+                                <li><strong>Transposing the Data:</strong> If your current CSV has languages as columns and words as rows, you will need to rotate it so that:
+                                    <ul>
+                                        <li>Words/text elements become column headers</li>
+                                        <li>Languages/variants become rows</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Parsing Additional Data:</strong> When transposing, you can extract and reorganize supplementary information such as:
+                                    <ul>
+                                        <li>Language codes or locale identifiers</li>
+                                        <li>Context notes or usage guidelines</li>
+                                        <li>Character limits or formatting requirements</li>
+                                        <li>Any metadata that should be preserved during the transformation</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Tools for Transposition:</strong> You can transpose your CSV using:
+                                    <ul>
+                                        <li>Spreadsheet software (Excel, Google Sheets) using the TRANSPOSE function</li>
+                                        <li>Programming scripts (Python pandas, R, etc.)</li>
+                                        <li>Online CSV transformation tools</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="instruction-section">
+                            <h2>Understanding CLDR Data Types</h2>
+                            <p>Each design element in your Figma template includes a comment specifying which CLDR (Common Locale Data Repository) data types it accepts. For example:</p>
+                            <ul>
+                                <li>A calendar mockup might use: <code>M (Monday)</code>, <code>T (Tuesday)</code>, <code>W (Wednesday)</code>, <code>TH (Thursday)</code>, <code>F (Friday)</code>, <code>S (Saturday/Sunday)</code></li>
+                                <li>Date formats might use: <code>dd/mm/yyyy</code> or other locale-specific patterns</li>
+                                <li>Number formats might specify decimal and thousand separators</li>
+                            </ul>
+                        </div>
+
+                        <div class="instruction-section">
+                            <h2>Using Figma Buzz Batch Create</h2>
+                            
+                            <h3>Step-by-Step Process</h3>
+                            <ol>
+                                <li><strong>Upload Your CSV:</strong> Import your properly formatted CSV file into the Figma Buzz batch create functionality</li>
+                                <li><strong>Select Variable:</strong> Choose the specific variable in your Figma template that you want to modify</li>
+                                <li><strong>Map Data Source:</strong> Select the corresponding column from your CSV that contains the data for that variable</li>
+                                <li><strong>Generate Mockups:</strong> Click the generate button to create mockups based on your selected variables and data mappings</li>
+                            </ol>
+                        </div>
+
+                        <div class="instruction-section">
+                            <h2>Optimal Use Cases</h2>
+                            <p>This application is particularly powerful when:</p>
+                            <ul>
+                                <li>You have multiple entries within a specific column (e.g., translations for many languages)</li>
+                                <li>You need to generate numerous design variations simultaneously</li>
+                                <li>You are working with batch translations that would otherwise require individual manual updates</li>
+                            </ul>
+                            <p>The batch create functionality significantly reduces translation time by processing all variants at once rather than requiring individual updates for each language or variation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshot Library Tab -->
+            <div class="tab-content" id="screenshots">
+                <div class="password-protected" id="screenshots-protected">
+                    <h2>Screenshot Library</h2>
+                    <p>This section is password protected. Please enter the password to access our screenshot collection.</p>
+                    <div class="password-form">
+                        <input type="password" id="screenshots-password" placeholder="Enter password" class="password-input">
+                        <button class="btn primary" onclick="checkPassword('screenshots')">Access Library</button>
+                    </div>
+                </div>
+                <div class="screenshots-content" id="screenshots-content" style="display: none;">
+                    <h2>Screenshot Library</h2>
+                    <p>Content coming soon...</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 MokBlok. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
