@@ -26,32 +26,8 @@
             <div class="tab-content active" id="home">
                 <div class="hero">
                     <h2>Welcome to MokBlok</h2>
-                    <p>Your creative hub for design inspiration and collaboration</p>
                     <div class="hero-buttons">
-                        <button class="btn primary" onclick="showTab('about')">Learn More</button>
-                        <button class="btn secondary" onclick="showTab('team')">Meet Our Team</button>
-                    </div>
-                </div>
-                <div class="features">
-                    <div class="feature-card">
-                        <h3>About Us</h3>
-                        <p>Discover our mission and values</p>
-                        <button class="btn" onclick="showTab('about')">Explore</button>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Our Team</h3>
-                        <p>Meet the creative minds behind MokBlok</p>
-                        <button class="btn" onclick="showTab('team')">Meet Us</button>
-                    </div>
-                    <div class="feature-card">
-                        <h3>UI/UX Templates</h3>
-                        <p>Access our collection of design templates</p>
-                        <button class="btn" onclick="showTab('templates')">Access</button>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Screenshot Library</h3>
-                        <p>Browse our curated screenshot collection</p>
-                        <button class="btn" onclick="showTab('screenshots')">Browse</button>
+                        <button class="btn primary" onclick="copyEmail()">Contact Us</button>
                     </div>
                 </div>
             </div>
@@ -79,33 +55,37 @@
 
             <!-- Team Tab -->
             <div class="tab-content" id="team">
-                <h2>Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-avatar">JD</div>
-                        <h3>Jane Doe</h3>
-                        <p class="role">Creative Director</p>
-                        <p class="bio">Passionate about creating meaningful user experiences and leading creative teams to success.</p>
+                <!-- Featured Team Member - Thomas S. Mullaney -->
+                <div class="featured-profile">
+                    <div class="profile-image-container">
+                        <img src="mullaney_-_2023_square_0.jpg.jpg" alt="Thomas S. Mullaney" class="profile-image">
                     </div>
-                    <div class="team-member">
-                        <div class="member-avatar">JS</div>
-                        <h3>John Smith</h3>
-                        <p class="role">Lead Designer</p>
-                        <p class="bio">Expert in UI/UX design with a focus on accessibility and user-centered design principles.</p>
-                    </div>
-                    <div class="team-member">
-                        <div class="member-avatar">MJ</div>
-                        <h3>Maria Johnson</h3>
-                        <p class="role">UX Researcher</p>
-                        <p class="bio">Dedicated to understanding user needs and translating insights into actionable design solutions.</p>
-                    </div>
-                    <div class="team-member">
-                        <div class="member-avatar">AL</div>
-                        <h3>Alex Lee</h3>
-                        <p class="role">Frontend Developer</p>
-                        <p class="bio">Bridges the gap between design and functionality, ensuring pixel-perfect implementations.</p>
+                    <div class="profile-content">
+                        <h3>Thomas S. Mullaney</h3>
+                        <p class="profile-title">Director of Stanford SILICON & Head Advisor of MokBlok</p>
+                        <p class="profile-email">tsmullaney [at] stanford.edu</p>
+                        <div class="profile-bio">
+                            <p>Thomas S. Mullaney is a SILICON Co-PI and current Director. He is a Professor of Chinese History at Stanford University, Kluge Chair in Technology and Society at the Library of Congress, and a Guggenheim Fellow. He is the author or lead editor of 8 books, including <em>The Chinese Computer: A Global History of the Information Age</em> (MIT Press, 2024), <em>Where Research Begins</em> (University of Chicago Press, 2022, with Christopher Rea), <em>The Chinese Typewriter: A History</em> (MIT Press, 2017, winner of the Fairbank Prize), and <em>Coming to Terms with the Nation: Ethnic Classification in Modern China</em> (UC Press, 2010).</p>
+                            <p>He earned his BA and MA from the Johns Hopkins University, and his PhD from Columbia University. For the past 15 years, his research, publications, conference planning, and coursework have focused expressly on asymmetries in the global information and language technologies, with a keen focus on writing systems that have been systematically marginalized and excluded from the modern information age.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Team Member - Neev Seedani -->
+                <div class="featured-profile">
+                    <div class="profile-image-container">
+                        <img src="Neev-2-972x1024.jpg" alt="Neev Seedani" class="profile-image">
+                    </div>
+                    <div class="profile-content">
+                        <h3>Neev Seedani</h3>
+                        <p class="profile-title">Project Manager and Lead Developer</p>
+                        <p class="profile-email">neev [at] stanford.edu</p>
+                        <div class="profile-bio">
+                            <p>My name is Neev Seedani, and I'm a second-year student at Stanford University in the Design program. Born in Pakistan, I grew up speaking five languages, and my interest in linguistics and language endangerment stems from my very own village language, Oadki. I'm excited to work toward better digital inclusion of diverse languages.</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 
             <!-- UI/UX Templates Tab -->

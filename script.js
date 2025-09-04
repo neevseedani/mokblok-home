@@ -235,6 +235,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Copy email to clipboard function
+function copyEmail() {
+    const email = 'neev@stanford.edu';
+    
+    // Use the modern clipboard API if available
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+            showNotification('Email copied to clipboard!', 'success');
+        }).catch(() => {
+            // Fallback for older browsers
+            fallbackCopyEmail(email);
+        });
+    } else {
+        // Fallback for older browsers or non-secure contexts
+        fallbackCopyEmail(email);
+    }
+}
+
+// Fallback method for copying email
+function fallbackCopyEmail(email) {
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showNotification('Email copied to clipboard!', 'success');
+    } catch (err) {
+        showNotification('Failed to copy email. Please copy manually: ' + email, 'error');
+    }
+    
+    document.body.removeChild(textArea);
+}
+
 // Note: Password protection now requires re-entry on every refresh
 // Session storage has been removed for enhanced security
 
